@@ -1,0 +1,56 @@
+<div class="container-fluid g-0">
+    <app-header (sideNavToggled)="sideNavStatus = $event;"></app-header>
+
+    <main>
+      <app-sidenav [sideNavStatus]="sideNavStatus" [ngClass]="{'app-sidenav-open' : sideNavStatus}"></app-sidenav>
+
+      <div class="display-area">
+
+        <div class="card text-white  mb-3" style="margin-left: 50px; margin-top: 50px; background-color: rgb(240, 233, 241);">
+            <h2 style="color: black;">Laundry request</h2>
+          </div>
+
+<div class="container">
+    <!-- <div class="row"> -->
+        <div class="col-md-6">
+            
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1">Date</label>
+                    <input type="date" class="form-control" id="date" name="date" placeholder="Enter Date" [(ngModel)]="obj.date">
+                </div>
+                <div class="mb-3">
+                    <label for="top">Top</label>
+                    <input type="text" class="form-control" id="top" name="top"  placeholder="Top Wear" [(ngModel)]="obj.top">
+                </div>
+                <div class="mb-3">
+                    <label for="bottom">Bottom</label>
+                    <input type="text" class="form-control" id="bottom" name="bottom" placeholder="Bottom Wear" [(ngModel)]="obj.bottom">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="woolean">Woolen</label>
+                    <input type="text" class="form-control" id="Woolen" name="Woolen" placeholder="Woolen Cloth" [(ngModel)]="obj.woolen">
+                </div>
+                <div class="mb-3">
+                    <label for="address">Address</label>
+                    <input type="textarea" class="form-control" id="address" name="address" placeholder="Pick up Address" [(ngModel)]="obj.address">
+                </div>
+                <div class="mb-3">
+                    <label for="contact">Contact Person</label>
+                    <input type="text" class="form-control" id="contact" name="contact" placeholder="Contact Person" [(ngModel)]="obj.contactPerson">
+                </div>
+                <div class="mb-3">
+                    <label for="desc">Description</label>
+                    <input type="text" class="form-control" id="desc" name="desc" placeholder="Description(If any)" [(ngModel)]="obj.description">
+                </div>
+                <div>
+                  <button type="submit" class="btn btn-primary" (click)="addLaundryRequest()"> Add</button>
+                </div>
+            </form>
+        </div>
+</div>
+
+</div>
+</main>
+</div>

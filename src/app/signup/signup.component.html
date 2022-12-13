@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+            <div class="text-center">
+                <h1>Sign Up</h1>
+                <h6>Register Yourself</h6>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="userObj.name"  placeholder="Enter Name">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="userObj.email"  placeholder="Enter Email">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="mb-3">
+                    <label for="mobileno">Mobile No.</label>
+                    <input type="number" class="form-control" id="mobileno" name="mobile" [(ngModel)]="userObj.mobile" placeholder="Enter Name">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                
+                <div class="mb-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password"[(ngModel)]="userObj.password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="signUpUser()" >Sign Up</button>
+                <div>
+                    <!-- <div class="fa fa-file-arrow-down"> download</div>  -->
+                <a style="color: #ffff; margin-top:10px" routerLink="/login">Already registered? click to Login!!</a>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>

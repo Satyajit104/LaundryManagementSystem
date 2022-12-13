@@ -1,0 +1,19 @@
+nav {
+    height: 100;
+}
+.side-nav-button {
+    display: flex;
+    /* justify-content: center; */
+    align-items:center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 100%;
+}
+/* .side-nav-button:hover {
+    background-color: dimgrey;
+    border-radius: 30%;
+} */
+/* .navbar-brand{
+    margin-top: 5px;
+
+} */

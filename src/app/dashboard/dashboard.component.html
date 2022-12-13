@@ -1,0 +1,83 @@
+
+<div class="container-fluid g-0">
+      <app-header (sideNavToggled)="sideNavStatus = $event;"></app-header>
+
+      <main>
+        <app-sidenav [sideNavStatus]="sideNavStatus" [ngClass]="{'app-sidenav-open' : sideNavStatus}"></app-sidenav>
+
+        <div class="display-area">
+         
+        <div class="card text-white  mb-3" style="margin-left: 50px; margin-top: 50px; background-color: rgb(158, 151, 159);">
+          <h2 style="color: black;">Dashboard/Overview </h2>
+        </div>
+          <div class="row">
+          <div class="card text-white bg-primary mb-3" style="max-width: 18rem; margin-right: 10px; margin-left: 60px;margin-top: 18px;">
+            <div class="card-header">{{requestCount}}&nbsp;&nbsp;New Request</div>
+            <div class="card-body">
+              <h5 class="card-title">View Details</h5>
+              <p class="card-text">Your laundry  request is submitted it will accept by admin soon!!!!!!!!!!!!!!!!!!!!!!!!.</p>
+            </div>
+          </div>
+         
+        
+
+        
+          <div class="card text-white bg-danger mb-3" style="max-width: 18rem; margin-right: 10px; margin-left: 20px; margin-top: 18px;">
+            <div class="card-header">{{acceptCount}}&nbsp;&nbsp;Accept</div>
+            <div class="card-body">
+              <h5 class="card-title">Secondary card title</h5>
+              <p class="card-text">Your laundry request is accepted by admin it is take some time to complete!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+            </div>
+          </div>
+     
+
+        
+          <div class="card text-white bg-warning mb-3" style="max-width: 18rem; margin-right: 10px; margin-left: 20px; margin-top: 18px;">
+            <div class="card-header">{{inprocessCount}}&nbsp;&nbsp;Inprocess</div>
+            <div class="card-body">
+              <h5 class="card-title">View Details</h5>
+              <p class="card-text">Your laundry request is in process, please stay connected with us!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+            </div>
+          </div>
+        
+       
+          <div class="card text-white bg-success mb-3" style="max-width: 18rem; margin-right: 10px; margin-left: 20px; margin-top: 18px;">
+            <div class="card-header">{{finishCount}}&nbsp;&nbsp;Finish</div>
+            <div class="card-body">
+              <h5 class="card-title">View Details</h5>
+              <p class="card-text">Your laundry request is finish now, it will take some time to reach  your home!!!!!!!!!!!!!!!!!!!</p> 
+            </div>
+          </div>
+        </div>
+        
+       
+            <div>
+          <h2  class="text-center" style="color: black;">Laundry Price per unit</h2>
+        </div>
+          <table class="table  table-striped" style="margin-left: 50px; width: 95%;">
+            <thead class="text-right" style="background-color: gray;">
+              <tr>
+                
+                <th scope="col">Types Of clothes</th>
+                <th scope="col">Price</th>
+               
+              </tr>
+            </thead>
+            <tbody class="text-right" >
+              <tr *ngIf="clothPricees.length == 0">
+                <th colspan="6" class="text-center info-label">No data  to display...</th>
+              </tr>
+              <tr *ngFor="let cloth of clothPricees">
+             
+                <td>{{cloth.type}}</td>
+                <td>{{cloth.price}}</td>
+               
+              </tr>
+              </tbody>
+              </table>
+          </div>
+        </main>
+      </div>
+    
+
+      

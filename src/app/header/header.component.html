@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand px-2" style = "background: #242a56;">
+    <div class="side-nav-button p-2 me-3 text-light" (click)="sideNavToggle()">
+        <i class="fa fa-bars"></i>
+       <p class="navbar-brand px-4 mt-3" style="color: white;">Laundry Management System</p>
+    </div>
+   
+    <div class="profile-logo dropStart-right" style="color: white;">
+        <button class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown">{{currentUser}}</button>
+        <ul class="dropdown-menu dropdown-menu-dark ">
+          <li >
+              <a class="dropdown-item" (click)="userLogout()">Logout</a>
+  
+          </li>
+        </ul>
+        </div>
+       
+
+     
+      
+</nav>

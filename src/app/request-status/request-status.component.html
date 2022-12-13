@@ -1,0 +1,71 @@
+<section class="gradient-custom">
+<div class="container-fluid g-0">
+    <app-header (sideNavToggled)="sideNavStatus = $event;"></app-header>
+
+    <main>
+      <app-sidenav [sideNavStatus]="sideNavStatus" [ngClass]="{'app-sidenav-open' : sideNavStatus}"></app-sidenav>
+
+      <div class="display-area">
+
+        <div class="card text-white  mb-3" style="margin-left: 60px; margin-top: 50px; width: 219%; background-color: rgb(240, 233, 241);">
+            <h2 style="color: black;">User Request Status</h2>
+          </div>
+<div class="container">
+    <div class="col-md-12">
+          <table class="table  table-striped" style="margin-left: 50px; width: 95%;">
+            <thead class="text-right" style="background-color: gray;">
+              <tr>
+                <th scope="col">Request Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Address</th>
+                <th scope="col">Contact person</th>
+                <th scope="col">Top wear</th>
+                <th scope="col">Bottom wear</th>
+
+                <th scope="col">Woolen Clothes</th>
+                <th scope="col">Status</th>
+
+
+                <th scope="col" style="text-align: center;">Action</th>
+
+               
+              </tr>
+            </thead>
+            <tbody class="text-right" >
+              <tr *ngIf="requestDetails.length == 0">
+                <th colspan="6" class="text-center info-label">No data  to display...</th>
+              </tr>
+              <tr *ngFor="let details of requestDetails">
+                <td>{{details.id}}</td>
+
+                <td>{{details.name}}</td>
+                <td>{{details.date}}</td>
+                <td>{{details.mobile}}</td>
+                <td>{{details.address}}</td>        
+                <td>{{details.contactPerson}}</td>              
+                <td>{{details.top}}</td>              
+                <td>{{details.bottom}}</td>              
+                <td>{{details.woolen}}</td> 
+                <td>{{details.status}}</td> 
+
+                <td>
+                  <button type="submit" class="btn btn-primary" (click)="accept(details)">Accept</button>&nbsp;
+                  <button type="submit" class="btn btn-primary" (click)="finish(details)">Finish</button>&nbsp;
+                  <button type="submit" class="btn btn-primary" (click)="inProcess(details)">inprocess</button>&nbsp;
+
+
+                </td>             
+      
+              
+              </tr>
+              </tbody>
+              </table>
+              </div>
+              </div>
+          
+    </div>
+    </main>
+    </div>
+  </section>
